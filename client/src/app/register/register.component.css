@@ -1,0 +1,33 @@
+.register_container {
+  background-color: #fff;
+  color: var(--text-color);
+  padding: 5% 5%;
+}
+
+.register_title {
+  background: linear-gradient(90deg, rgba(230,73,128,1) 0%, rgba(214,51,108,1) 50%);
+  -webkit-background-clip: text; /* Apply gradient as background to text (for Safari) */
+  background-clip: text; /* Apply gradient as background to text (for other browsers) */
+  color: transparent; /* Make the text transparent to show the gradient */
+}
+
+.form-check-label {
+  color: rgba(214, 51, 108, 1);
+}
+
+.button {
+  text-transform: uppercase;
+  font-size: 14px;
+  background: linear-gradient(90deg, rgba(230,73,128,1) 0%, rgba(214,51,108,1) 50%);
+  color: white; /* Set the text color to white or any other contrasting color */
+  padding: 10px 20px; /* Adjust padding as needed */
+  border: none; /* Remove border */
+  border-radius: 10px; /* Add border radius for a rounded button */
+  cursor: pointer; /* Add cursor pointer on hover */
+}
+
+.button:hover {
+  background: linear-gradient(90deg, rgba(214,51,108,1) 0%, rgba(230,73,128,1) 50%);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  transform: translateY(-2px);
+}

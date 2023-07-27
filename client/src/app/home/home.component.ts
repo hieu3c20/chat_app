@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AccountService } from '../_services/account.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   registerMode = false;
-  users: any;
+  model: any = {};
 
-  constructor() { }
+  constructor(public accountService: AccountService,  private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -22,4 +24,12 @@ export class HomeComponent implements OnInit {
     this.registerMode = event;
   } 
 
+  login() {
+    this.accountService.login(this.model).subscribe({
+      next: (_) => {
+        this.router.navigateByUrl('/members');
+        this.model = {};
+      },
+    });
+  }
 }

@@ -1,0 +1,50 @@
+.container_login {
+  width: 600px;
+  padding-bottom: 150px;
+  margin-top: -40px;
+  background-color: #fff;
+  color: var( --text-color);
+}
+
+.home_title {
+  background: linear-gradient(90deg, rgba(230,73,128,1) 0%, rgba(214,51,108,1) 50%);
+  -webkit-background-clip: text; /* Apply gradient as background to text (for Safari) */
+  background-clip: text; /* Apply gradient as background to text (for other browsers) */
+  color: transparent; /* Make the text transparent to show the gradient */
+}
+
+.form-control {
+  width: 200px;
+  margin-bottom: 10px;
+  background-color: #f2f2f2;
+}
+
+.form_login {
+  height: 50px;
+}
+
+.brand_name {
+  width: 200px;
+}
+
+.text-center {
+  margin-bottom: 20px;
+}
+
+.button {
+  text-transform: uppercase;
+  font-size: 14px;
+  background: linear-gradient(90deg, rgba(230,73,128,1) 0%, rgba(214,51,108,1) 50%);
+  color: white; /* Set the text color to white or any other contrasting color */
+  padding: 10px 20px; /* Adjust padding as needed */
+  border: none; /* Remove border */
+  border-radius: 10px; /* Add border radius for a rounded button */
+  cursor: pointer; /* Add cursor pointer on hover */
+}
+
+.button:hover {
+  background: linear-gradient(90deg, rgba(214,51,108,1) 0%, rgba(230,73,128,1) 50%);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  transform: translateY(-2px);
+}
+

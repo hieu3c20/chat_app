@@ -1,9 +1,27 @@
-.dropdown-toggle, .dropdown-item {
-    cursor: pointer;
+.dropdown-toggle,
+.dropdown-item {
+  cursor: pointer;
 }
 
 img {
-    max-height: 50px;
-    border: 2px solid white;
-    display: inline;
+  max-width: 50px;
+  border: 2px solid white;
+  display: inline;
+}
+
+.brand_name {
+  cursor: pointer;
+  display: block;
+  width: 50px;
+  border: none;
+}
+
+.navbar {
+  background-color: var(--background-color);
+}
+
+.nav-link {
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 24px;
 }
