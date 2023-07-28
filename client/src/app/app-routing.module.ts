@@ -14,6 +14,12 @@ import { AdminGuard } from './_guards/admin.guard';
 import { AuthGuard } from './_guards/auth.guard';
 import { PreventUnsavedChangesGuard } from './_guards/prevent-unsaved-changes.guard';
 import { MemberDetailedResolver } from './_resolvers/member-detailed.resolver';
+import { NewFeedsComponent } from './new-feeds/new-feeds.component';
+import { VideoComponent } from './video/video.component';
+import { ShopCategoryComponent } from './shop-category/shop-category.component';
+import { GameComponent } from './game/game.component';
+import { CommunityComponent } from './community/community.component';
+import { BodyPageComponent } from './body-page/body-page.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -21,10 +27,18 @@ const routes: Routes = [
     runGuardsAndResolvers: 'always',
     canActivate: [AuthGuard],
     children: [
-      {path: 'members', component: MemberListComponent},
+      {path: 'members', component: BodyPageComponent},
       {path: 'members/:username', component: MemberDetailComponent, resolve: {member: MemberDetailedResolver}},
       {path: 'member/edit', component: MemberEditComponent, canDeactivate: [PreventUnsavedChangesGuard]},
+
+      // {path: 'member/new-feeds', component: NewFeedsComponent},
+      {path: 'videos', component: VideoComponent},
+      {path: 'shop-category', component: ShopCategoryComponent},
+      {path: 'games', component: GameComponent},
       {path: 'lists', component: ListsComponent},
+      {path: 'community', component: CommunityComponent},
+
+
       {path: 'messages', component: MessagesComponent},
       {path: 'admin', component: AdminPanelComponent, canActivate: [AdminGuard]},
     ]

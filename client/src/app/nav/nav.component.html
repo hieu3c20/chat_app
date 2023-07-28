@@ -1,5 +1,7 @@
-<nav class="navbar navbar-expand-md navbar-dark fixed-top">
-  <div class="container">
+<nav
+  class="navbar navbar-expand-md navbar-dark fixed-top d-flex justify-content-between"
+>
+  <div class="container_left d-flex justify-content-center align-items-center">
     <img
       class="brand_name"
       src="./assets/brand_name_background_removing.png"
@@ -8,8 +10,56 @@
       routerLinkActive="active"
     />
 
+    <form>
+      <div class="md-form active-pink active-pink-2">
+        <input
+          class="form-control"
+          type="search"
+          id="search1"
+          aria-label="Search"
+          mdbInput
+        />
+        <!-- <label for="search1">Search</label> -->
+      </div>
+    </form>
+  </div>
+
+  <div class="container_middle">
     <ul class="navbar-nav me-auto mb-2 mb-md-0">
+
       <ng-container *ngIf="accountService.currentUser$ | async">
+        <li class="nav-item d-flex justify-content-center">
+          <a
+            class="nav-link"
+            routerLink="/members"
+          
+            routerLinkActive="active"
+            ><i class="fa-solid fa-house"></i
+          ></a>
+        </li>
+        <li class="nav-item d-flex justify-content-center">
+          <a class="nav-link" routerLink="/videos" routerLinkActive="active"
+            ><i class="fa-solid fa-video"></i
+          ></a>
+        </li>
+        <li class="nav-item d-flex justify-content-center">
+          <a class="nav-link" routerLink="/shop-category" routerLinkActive="active"
+            ><i class="fa-solid fa-shop"></i
+          ></a>
+        </li>
+        <li class="nav-item d-flex justify-content-center">
+          <a class="nav-link" routerLink="/community" routerLinkActive="active"
+            ><i class="fa-solid fa-people-group"></i
+          ></a>
+        </li>
+        <li class="nav-item d-flex justify-content-center">
+          <a class="nav-link" routerLink="/games" routerLinkActive="active"
+            ><i class="fa-solid fa-gamepad"></i
+          ></a>
+        </li>
+      </ng-container>
+
+      <!-- <ng-container *ngIf="accountService.currentUser$ | async">
         <li class="nav-item">
           <a
             class="nav-link"
@@ -34,32 +84,15 @@
             >Admin</a
           >
         </li>
-      </ng-container>
+      </ng-container>  -->
       <li class="nav-item">
         <a class="nav-link" routerLink="/errors" routerLinkActive="active"
-          >Errors</a
-        >
+          ><i class="fa-solid fa-exclamation"></i
+        ></a>
       </li>
     </ul>
 
-    <div
-      class="dropdown"
-      *ngIf="accountService.currentUser$ | async as user"
-      dropdown
-    >
-      <img src="{{ user.photoUrl || './assets/user.png' }}" alt="user photo" />
-      <a
-        class="dropdown-toggle text-light text-decoration-none ms-2"
-        dropdownToggle
-        >Welcome {{ user.knownAs }}</a
-      >
-      <div class="dropdown-menu mt-3" *dropdownMenu>
-        <a class="dropdown-item" routerLink="/member/edit">Edit Profile</a>
-        <a class="dropdown-item" (click)="logout()">Logout</a>
-      </div>
-    </div>
-
-    <form
+    <!-- <form
       *ngIf="!(accountService.currentUser$ | async)"
       #loginForm="ngForm"
       class="d-flex"
@@ -81,6 +114,32 @@
         placeholder="Password"
       />
       <button class="btn btn-success" type="submit">Login</button>
-    </form>
+    </form> -->
+  </div>
+
+  <div class="container_right d-flex align-items-center">
+    <div
+      class="dropdown"
+      *ngIf="accountService.currentUser$ | async as user"
+      dropdown
+    >
+      <img class="rounded-circle" src="{{ user.photoUrl || './assets/user.png' }}" alt="user photo" />
+      <a
+        class="dropdown-toggle text-light text-decoration-none ms-2"
+        dropdownToggle
+        >{{ user.knownAs }}</a
+      >
+      <div class="dropdown-menu mt-3" *dropdownMenu>
+        <a class="dropdown-item" routerLink="/member/edit">Edit Profile</a>
+        <a class="dropdown-item" (click)="logout()">Logout</a>
+      </div>
+    </div>
+
+    <div class="button_collection d-flex align-items-center">
+      <a [routerLink]="'/route1'"><i class="fa-solid fa-plus"></i></a>
+      <a [routerLink]="'/route2'"><i class="fa-solid fa-message"></i></a>
+      <a [routerLink]="'/route3'"><i class="fa-solid fa-bell"></i></a>
+      <a [routerLink]="'/route4'"><i class="fa-solid fa-caret-down"></i></a>
+    </div>
   </div>
 </nav>

@@ -32,6 +32,16 @@ import { UserManagementComponent } from './admin/user-management/user-management
 import { PhotoManagementComponent } from './admin/photo-management/photo-management.component';
 import { RolesModalComponent } from './modals/roles-modal/roles-modal.component';
 import { ConfirmDialogComponent } from './modals/confirm-dialog/confirm-dialog.component';
+import { NewFeedsComponent } from './new-feeds/new-feeds.component';
+import { VideoComponent } from './video/video.component';
+import { ShopCategoryComponent } from './shop-category/shop-category.component';
+import { GameComponent } from './game/game.component';
+import { CommunityComponent } from './community/community.component';
+import { LeftHandSideComponent } from './left-hand-side/left-hand-side.component';
+import { RightHandSideComponent } from './right-hand-side/right-hand-side.component';
+import { BodyPageComponent } from './body-page/body-page.component';
+import { ContentPageComponent } from './content-page/content-page.component';
+import { RightAdvertisementComponent } from './right-advertisement/right-advertisement.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +67,17 @@ import { ConfirmDialogComponent } from './modals/confirm-dialog/confirm-dialog.c
     UserManagementComponent,
     PhotoManagementComponent,
     RolesModalComponent,
-    ConfirmDialogComponent
+    ConfirmDialogComponent,
+    NewFeedsComponent,
+    VideoComponent,
+    ShopCategoryComponent,
+    GameComponent,
+    CommunityComponent,
+    LeftHandSideComponent,
+    RightHandSideComponent,
+    BodyPageComponent,
+    ContentPageComponent,
+    RightAdvertisementComponent
   ],
   imports: [
     BrowserAnimationsModule,

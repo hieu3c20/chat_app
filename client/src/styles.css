@@ -1,72 +1,83 @@
 /* You can add global styles to this file, and also import other style files */
 .tab-panel {
-    border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 4px;
-  }
-  
-  .nav-tabs > li.open, .member-tabset > .nav-tabs > li:hover {
-    border-bottom: 4px solid #fbcdcf;
-  }
-  
-  .member-tabset > .nav-tabs > li.open > a, .member-tabset > .nav-tabs > li:hover > a {
-    border: 0 !important;
-    background: none !important;
-    color: #333333;
-  }
-  
-  .member-tabset > .nav-tabs > li.open > a > i, .member-tabset > .nav-tabs > li:hover > a > i {
-    color: #a6a6a6;
-  }
-  
-  .member-tabset > .nav-tabs > li.open .dropdown-menu, .member-tabset > .nav-tabs > li:hover .dropdown-menu {
-    margin-top: 0px;
-  }
-  
-  .member-tabset > .nav-tabs > li.active {
-    border-bottom: 4px solid #E95420;
-    position: relative;
-  }
-  
-  .member-tabset > .nav-tabs > li.active > a {
-    border: 0 !important;
-    color: #333333;
-  }
-  
-  .member-tabset > .nav-tabs > li.active > a > i {
-    color: #404040;
-  }
-  
-  .member-tabset > .tab-content {
-    margin-top: -3px;
-    background-color: #fff;
-    border: 0;
-    border-top: 1px solid #eee;
-    padding: 15px 0;
-  }
-  
-  .nav-tabs {
-      --bs-nav-tabs-border-width: 0px;
-  }
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 4px;
+}
 
-  link[rel="icon"] {
-    background-size: 200px;
-  }
+.nav-tabs > li.open,
+.member-tabset > .nav-tabs > li:hover {
+  border-bottom: 4px solid #fbcdcf;
+}
 
-  :root {
-    --input-padding-x: 1.5rem;
-    --input-padding-y: .75rem;
+.member-tabset > .nav-tabs > li.open > a,
+.member-tabset > .nav-tabs > li:hover > a {
+  border: 0 !important;
+  background: none !important;
+  color: #333333;
+}
 
-    --text-color: #212529;
+.member-tabset > .nav-tabs > li.open > a > i,
+.member-tabset > .nav-tabs > li:hover > a > i {
+  color: #a6a6a6;
+}
 
-    /* pink3 */
-    --background-color: #faa2c1;
+.member-tabset > .nav-tabs > li.open .dropdown-menu,
+.member-tabset > .nav-tabs > li:hover .dropdown-menu {
+  margin-top: 0px;
+}
 
-    --primary-text-color: rgb(249,248,252);
-  }
+.member-tabset > .nav-tabs > li.active {
+  border-bottom: 4px solid #e95420;
+  position: relative;
+}
 
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    color: var(--text-color);
-  }
+.member-tabset > .nav-tabs > li.active > a {
+  border: 0 !important;
+  color: #333333;
+}
+
+.member-tabset > .nav-tabs > li.active > a > i {
+  color: #404040;
+}
+
+.member-tabset > .tab-content {
+  margin-top: -3px;
+  background-color: #fff;
+  border: 0;
+  border-top: 1px solid #eee;
+  padding: 15px 0;
+}
+
+.nav-tabs {
+  --bs-nav-tabs-border-width: 0px;
+}
+
+link[rel="icon"] {
+  background-size: 200px;
+}
+
+:root {
+  --input-padding-x: 1.5rem;
+  --input-padding-y: 0.75rem;
+
+  --text-color: #212529;
+
+  /* grey 4 */
+  --grey-color: #ced4da;
+
+  /* pink3 */
+  --background-color: #faa2c1;
+
+  --main-color: #d6336c;
+
+  --primary-text-color: rgb(249, 248, 252);
+
+  --background-input: #f2f2f2;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  color: var(--text-color);
+}

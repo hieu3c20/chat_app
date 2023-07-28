@@ -1,3 +1,19 @@
+/* left: search */
+.active-pink-2 input[type=search]:focus:not([readonly]) {
+
+  border-bottom: 1px solid #f48fb1;
+  box-shadow: 0 1px 0 0 #f48fb1;
+}
+.active-pink input[type=search] {
+  background-color: var(--background-input);
+  border-bottom: 1px solid #f48fb1;
+  box-shadow: 0 1px 0 0 #f48fb1;
+}
+
+.active {
+ color: var(--main-color) !important;
+}
+
 .dropdown-toggle,
 .dropdown-item {
   cursor: pointer;
@@ -17,11 +33,59 @@ img {
 }
 
 .navbar {
-  background-color: var(--background-color);
+  background-color: #fff;
+  height: 80px;
+  padding: 0 5%;
+}
+
+.nav-item  a{
+  width: 80px;
+  display: flex;
+  justify-content: center;
 }
 
 .nav-link {
-  color: var(--text-color);
+  display: block;
+  color: var(--grey-color);
   font-weight: 500;
   font-size: 24px;
+  margin: auto auto;
 }
+
+.nav-item .nav-link.active {
+  width: 60px;
+  border-bottom: 2px solid var(--main-color); /* Change this to the desired underline color */
+  transition: transform 0.2s ease-in-out;
+  color: var(--main-color);
+}
+
+/* right: category */
+
+.button_collection a {
+  text-decoration: none;
+  color: var(--inactive-color);
+  margin-right: 10px; /* Optional: Add spacing between icons */
+}
+
+.button_collection i{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  color: var(--main-color);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: var(--background-input);
+  color: var(--grey-color);
+}
+
+.button_collection a:hover {
+  color: var(--main-color); /* Change color on hover */
+}
+
+
+.dropdown {
+  padding-right: 10px;
+}
+
