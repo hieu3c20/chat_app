@@ -1,0 +1,28 @@
+<div class="category_left d-flex justify-content-start flex-column">
+  <div
+    routerLink="/member/edit"
+    class="dropdown d-flex align-items-start justify-content-start"
+    *ngIf="accountService.currentUser$ | async as user"
+    dropdown
+  >
+    <img
+      class="category_avatar rounded-circle"
+      src="{{ user.photoUrl || './assets/user.png' }}"
+      alt="user photo"
+    />
+    <div class="ms-2">{{ user.knownAs }}</div>
+    <div class="dropdown-menu mt-3" *dropdownMenu>
+      <a class="dropdown-item">Edit Profile</a>
+    </div>
+  </div>
+
+  <div class="category_new_feeds">New feed</div>
+
+  <div class="category_group">Group</div>
+
+  <div class="category_marketplace">Marketplace</div>
+
+  <div class="category_video">Video</div>
+
+  <div class="category_more">More</div>
+</div>

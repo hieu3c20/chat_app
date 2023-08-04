@@ -23,6 +23,7 @@ export class AppComponent implements OnInit {
   }
 
   shouldRenderNav(): boolean {
-    return this.router.url !== '/';
+    return this.router.url !== '/' && this.router.url !== '/member/edit';
+    
   }
 }

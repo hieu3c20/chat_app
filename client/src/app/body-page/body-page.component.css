@@ -1,0 +1,23 @@
+.left_hand_side {
+  flex-basis: 25%;
+  position: sticky;
+  top: 70px;
+  align-self: flex-start;  
+}
+
+.scrollable-content {
+  flex-basis: 47%;
+  height: 1000px;
+  margin: 0 14px;
+}
+
+.right_hand_side {
+  flex-basis: 25%;
+  position: sticky;
+  top: 70px;
+  align-self: flex-start;
+  background: var(--bg-color);
+  padding: 20px;
+  border-radius: 4px;
+  color: #626262;
+}

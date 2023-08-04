@@ -42,6 +42,8 @@ import { RightHandSideComponent } from './right-hand-side/right-hand-side.compon
 import { BodyPageComponent } from './body-page/body-page.component';
 import { ContentPageComponent } from './content-page/content-page.component';
 import { RightAdvertisementComponent } from './right-advertisement/right-advertisement.component';
+import { LeftGroupComponent } from './left-group/left-group.component';
+import { LeftCategoryComponent } from './left-category/left-category.component';
 
 @NgModule({
   declarations: [
@@ -77,7 +79,9 @@ import { RightAdvertisementComponent } from './right-advertisement/right-adverti
     RightHandSideComponent,
     BodyPageComponent,
     ContentPageComponent,
-    RightAdvertisementComponent
+    RightAdvertisementComponent,
+    LeftGroupComponent,
+    LeftCategoryComponent
   ],
   imports: [
     BrowserAnimationsModule,

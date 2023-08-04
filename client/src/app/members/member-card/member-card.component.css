@@ -27,6 +27,10 @@
     opacity: 0;
 }
 
+.list-inline-item {
+    width: 5px;
+}
+
 .card-img-wrapper:hover .member-icons {
     bottom: 0;
     opacity: 1;
