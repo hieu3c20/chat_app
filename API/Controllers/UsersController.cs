@@ -38,7 +38,7 @@ namespace API.Controllers
             }
 
             var users = await _uow.UserRepository.GetMembersAsync(userParams);
-
+ 
             Response.AddPaginationHeader(new PaginationHeader(users.CurrentPage, users.PageSize, 
                 users.TotalCount, users.TotalPages));
 

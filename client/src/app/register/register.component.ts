@@ -13,7 +13,7 @@ export class RegisterComponent implements OnInit {
   @Output() cancelRegister = new EventEmitter();
   registerForm: FormGroup = new FormGroup({});
   maxDate: Date = new Date();
-  validationErrors: string[] | undefined;
+  validationErrors: any[] = [];
 
   constructor(private accountService: AccountService, private toastr: ToastrService, 
       private fb: FormBuilder, private router: Router) { }
@@ -42,7 +42,7 @@ export class RegisterComponent implements OnInit {
 
   matchValues(matchTo: string): ValidatorFn {
     return (control: AbstractControl) => {
-      return control.value === control.parent?.get(matchTo)?.value ? null : {notMatching: true}
+      return control.value === control.parent?.get(matchTo)?.value ? null : {notMatching: true} 
     }
   }
 
@@ -54,7 +54,12 @@ export class RegisterComponent implements OnInit {
         this.router.navigateByUrl('/members')
       },
       error: error => {
-        this.validationErrors = error
+        console.log(error.error);
+
+        this.validationErrors = error.error
+
+        console.log(this.validationErrors);
+        
       } 
     })
   }

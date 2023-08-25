@@ -21,16 +21,30 @@ export class ErrorInterceptor implements HttpInterceptor {
         if (error) {
           switch (error.status) {
             case 400:
+              console.log("interceptor error: " + error)
+              
+
+
               if (error.error.errors) {
                 const modelStateErrors = [];
                 for (const key in error.error.errors) {
                   if (error.error.errors[key]) {
                     modelStateErrors.push(error.error.errors[key])
+                    console.log(error.error.errors[key]);
                   }
                 }
                 throw modelStateErrors.flat();
               } else {
-                this.toastr.error(error.error, error.status.toString())
+                if (error.error.length > 0) {
+                  error.error.forEach((element: any) => {
+                    this.toastr.error(element.description, error.status.toString())
+                  }
+                  );
+                } else {
+
+                  this.toastr.error(error.error[1].description, error.status.toString())
+                }
+                
               }
               break;
             case 401:
