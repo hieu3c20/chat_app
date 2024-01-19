@@ -1,11 +1,24 @@
 using API.Extensions;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace API.Entities
 {
+    
+        public class DateOnlyConverter : ValueConverter<DateOnly, DateTime>
+        {
+            public DateOnlyConverter(ConverterMappingHints mappingHints = null)
+                : base(
+                    v => v.ToDateTime(TimeOnly.MinValue),
+                    v => DateOnly.FromDateTime(v),
+                    mappingHints)
+            {
+            }
+        }
+    
     public class AppUser : IdentityUser<int>
     {
-        public DateOnly DateOfBirth { get; set; }
+        // public DateTime DateOfBirth { get; set; } = DateTime.UtcNow;
         public string KnownAs { get; set; }
         public DateTime Created { get; set; } = DateTime.UtcNow;
         public DateTime LastActive { get; set; } = DateTime.UtcNow;
