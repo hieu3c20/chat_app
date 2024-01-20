@@ -1,8 +1,8 @@
 .right_hand_side {
   height: 1000px;
   background-color: #fff;
-  display: flex;
-  justify-content: left;
+  /* display: flex; */
+  /* justify-content: left;
   align-items: center;
-  flex-direction: column;
+  flex-direction: column; */
 }

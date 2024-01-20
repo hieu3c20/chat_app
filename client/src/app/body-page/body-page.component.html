@@ -1,4 +1,4 @@
-<div class="content_page" style="display: flex; justify-content: center">
+<div class="content_page_container">
   <div
     class="left_hand_side"
     style="flex-basis: 25%; position: sticky; top: 70px; align-self: flex-start"
@@ -7,25 +7,13 @@
   </div>
 
   <div
-    class="scrollable-content"
-    style="flex-basis: 47%; height: 1000px; margin: 0 14px"
-  >
-    <app-content-page class="content_page"></app-content-page>
+    class="scrollable-content">
+  
+    <app-content-page></app-content-page>
   </div>
 
   <div
-    class="right_hand_side"
-    style="
-      flex-basis: 25%;
-      position: sticky;
-      top: 70px;
-      align-self: flex-start;
-      background: var(--bg-color);
-      padding: 20px;
-      border-radius: 4px;
-      color: #626262;
-    "
-  >
+    class="right_hand_side">
     <app-right-hand-side></app-right-hand-side>
   </div>
 </div>
